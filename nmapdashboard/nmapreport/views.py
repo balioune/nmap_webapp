@@ -335,7 +335,7 @@ def index(request, filterservice="", filterportid=""):
 	else:
 		r['auth'] = True
 
-	gitcmd = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD')
+	gitcmd = os.popen('cd ' + settings.PROJECT_ROOT + '/../' + 'nmapreport && git rev-parse --abbrev-ref HEAD')
 	r['webmapver'] = 'WebMap '+gitcmd.read()+'<br>This project is currently a beta, please <b>DO NOT</b> expose WebMap to internet.<br>This version is <b>NOT</b> production ready.'
 
 	if 'scanfile' in request.session:

@@ -115,10 +115,10 @@ def genPDF(request):
 
 	if 'scanfile' in request.session:
 		pdffile = hashlib.md5(str(request.session['scanfile']).encode('utf-8')).hexdigest()
-		if os.path.exists('/opt/nmapdashboard/nmapreport/static/'+pdffile+'.pdf'):
-			os.remove('/opt/nmapdashboard/nmapreport/static/'+pdffile+'.pdf')
+		if os.path.exists(settings.PROJECT_ROOT + '/../' + 'nmapreport/static/'+pdffile+'.pdf'):
+			os.remove(settings.PROJECT_ROOT + '/../' + 'nmapreport/static/'+pdffile+'.pdf')
 
-		os.popen('/opt/wkhtmltox/bin/wkhtmltopdf --cookie sessionid '+request.session._session_key+' --enable-javascript --javascript-delay 6000 http://127.0.0.1:8000/view/pdf/ /opt/nmapdashboard/nmapreport/static/'+pdffile+'.pdf')
+		os.popen('/opt/wkhtmltox/bin/wkhtmltopdf --cookie sessionid '+request.session._session_key+' --enable-javascript --javascript-delay 6000 http://127.0.0.1:8000/view/pdf/' + settings.PROJECT_ROOT + '/../' + 'nmapreport/static/'+pdffile+'.pdf')
 		res = {'ok':'PDF created', 'file':'/static/'+pdffile+'.pdf'}
 		return HttpResponse(json.dumps(res), content_type="application/json")
 
@@ -130,7 +130,7 @@ def getCVE(request):
 
 	if request.method == "POST":
 		scanfilemd5 = hashlib.md5(str(request.session['scanfile']).encode('utf-8')).hexdigest()
-		cveproc = os.popen('python3 /opt/nmapdashboard/nmapreport/nmap/cve.py '+request.session['scanfile'])
+		cveproc = os.popen('python3' + settings.PROJECT_ROOT + '/../' + 'nmapreport/nmap/cve.py '+request.session['scanfile'])
 		res['cveout'] = cveproc.read()
 		cveproc.close()
 
@@ -320,7 +320,7 @@ def apiv1_scan(request):
 	if token_check(request.GET['token']) is not True:
 		return HttpResponse(json.dumps({'error':'invalid token'}, indent=4), content_type="application/json")
 
-	gitcmd = os.popen('cd /opt/nmapdashboard/nmapreport && git rev-parse --abbrev-ref HEAD')
+	gitcmd = os.popen('cd ' + settings.PROJECT_ROOT + '/../' + 'nmapreport && git rev-parse --abbrev-ref HEAD')
 	r['webmap_version'] = gitcmd.read().strip()
 
 	#xmlfiles = os.listdir('/opt/xml')

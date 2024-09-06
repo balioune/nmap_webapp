@@ -62,6 +62,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'nmapdashboard.wsgi.application'
 
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -69,7 +70,7 @@ WSGI_APPLICATION = 'nmapdashboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/opt/afklm/scanning/opt/nmapdashboard/db.sqlite3',
+        'NAME': PROJECT_ROOT + '/db.sqlite3',
     }
 }
 
@@ -111,6 +112,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-print("PROJECT_ROOT", PROJECT_ROOT)
