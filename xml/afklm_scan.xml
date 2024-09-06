@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Fri Sep  6 10:26:03 2024 as: nmap -sV -F -&#45;script=http-title,ssl-cert -&#45;script=/opt/nmapdashboard/nmapreport/nmap/nse/ -oX /tmp/afklm_scan.xml.active 192.168.1.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sV -F -&#45;script=http-title,ssl-cert -&#45;script=/opt/nmapdashboard/nmapreport/nmap/nse/ -oX /tmp/afklm_scan.xml.active 192.168.1.0/24" start="1725618363" startstr="Fri Sep  6 10:26:03 2024" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1725618363" endtime="1725618530"><status state="up" reason="echo-reply" reason_ttl="64"/>
+<address addr="192.168.1.2" addrtype="ipv4"/>
+<hostnames>
+<hostname name="foutatoro-001.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="resets" count="96"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="179"><state state="open" reason="syn-ack" reason_ttl="255"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5432"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" servicefp="SF-Port5432-TCP:V=7.60%I=7%D=9/6%Time=66DAD8E0%P=x86_64-pc-linux-gnu%r(SMBProgNeg,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2065363\.19778:\x20server\x20supports\x203\.0\x20to\x203\.0\0Fpostmaster\.c\0L2142\0RProcessStartupPacket\0\0&quot;);" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service><script id="fingerprint-strings" output="&#xa;  SMBProgNeg: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 3.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2142&#xa;    RProcessStartupPacket"><elem key="SMBProgNeg">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 3.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2142&#xa;    RProcessStartupPacket</elem>
+</script><script id="ssl-cert" output="Subject: commonName=ubuntu&#xa;Subject Alternative Name: DNS:ubuntu&#xa;Issuer: commonName=ubuntu&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-09-09T19:54:21&#xa;Not valid after:  2032-09-06T19:54:21&#xa;MD5:   9a48 6dbc 766a 1375 2e05 15bb 269f e059&#xa;SHA-1: 0e61 72e5 9c8e 1aa7 17ab 06d6 385b f3bd ab25 cc5d"><table key="subject">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x635acb764908</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="value">CA:FALSE</elem>
+<elem key="name">X509v3 Basic Constraints</elem>
+</table>
+<table>
+<elem key="value">DNS:ubuntu</elem>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+</table>
+<table>
+<elem key="value">AA:F4:AC:4B:04:14:6E:BD:79:32:A6:88:18:0A:9E:D6:34:E7:E7:3D</elem>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-09-09T19:54:21</elem>
+<elem key="notAfter">2032-09-06T19:54:21</elem>
+</table>
+<elem key="md5">9a486dbc766a13752e0515bb269fe059</elem>
+<elem key="sha1">0e6172e59c8e1aa717ab06d6385bf3bdab25cc5d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC7zCCAdegAwIBAgIUUIzmSSelE5wQbMO8vJoO+Bj9YuAwDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIyMDkwOTE5NTQyMVoXDTMyMDkwNjE5&#xa;NTQyMVowETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAs1RkfOgOGcAfUuX+XCOxF04YVywZT7rVg+Din3MOhe7nmpjG0CgX&#xa;1V7Usp3MNnGIMsD8Pbtg5ZrCI1EOINBYfYW0P5mrwOpgFmeNSARC9NnZ69NKPtuc&#xa;i8hnRFUs6wdWO3lCbBUnsTBOpDsTprpbMnPTzPZAWhYN35MDvciZBqPovZJUcoZt&#xa;Nxr64oKc0q8GDVxM9/5PpJJtE/MzmMq3SbkHSbh+s7wWjUPA6yW9ruD/z/vVoTVf&#xa;r8oWfpO3aOVFYpgBV+HSqBnbAOM+EjTEwL6ZK7Go1O+D4BshIXa0u1QGi25KBmM5&#xa;3Re1FdV0hyJjyVIa3GTS4J+CUrsEM2zMqwIDAQABoz8wPTAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTAdBgNVHQ4EFgQUqvSsSwQUbr15MqaIGAqe1jTn5z0w&#xa;DQYJKoZIhvcNAQELBQADggEBAK0zaEDtdgLM9ByhPRQ7/xYox/+LoCahx2EN4mOR&#xa;+HD0XoF4Kz0KvMQYv55K6/FNegqdianxgndUzdd6WnchNT2Zm9MX7E37YTfXGpxV&#xa;OFyaxwFt4cGlhnzo/DEJH8G8oeMQq+1LEZ/+Yj6Wew6sTz4H1XActCAt351h46Nq&#xa;UcGv67eqAEALUz5TeJM+cNbjlfjak9r1dgQDsfC9COXTu1FzAL9LOAQRV1pN2Zba&#xa;l6No8QEdy8mRuMSrVAX92+C7aZaFT+qp1v/5kVGQEquDQaggpqCNNpBz4BEVzrMw&#xa;6jz5Q5l47TKq1PpRChJPoBoK0nL9QTOBI/j/nhv2yPf/cq4=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-alt" product="WSGIServer/0.2 CPython/3.6.9" servicefp="SF-Port8000-TCP:V=7.60%I=7%D=9/6%Time=66DAD8E0%P=x86_64-pc-linux-gnu%r(GetRequest,19DD,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2006\x20Sep\x202024\x2010:26:40\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3\.6\.9\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20DENY\r\nVary:\x20Cookie\r\nContent-Length:\x206227\r\nX-Content-Type-Options:\x20nosniff\r\nSet-Cookie:\x20\x20csrftoken=IG39UguRkKBu4QDeTQlWD7NpvVeozhJJ4aEkeI32odg7etHc8U1npWIRBIYuPNHX;\x20expires=Fri,\x2005\x20Sep\x202025\x2010:26:40\x20GMT;\x20Max-Age=31449600;\x20Path=/;\x20SameSite=Lax\r\n\r\n\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head&gt;\n\t&lt;title&gt;WebMap&lt;/title&gt;\n\t&lt;link\x20href=\&quot;https://fonts\.googleapis\.com/icon\?family=Material\+Icons\&quot;\x20rel=\&quot;stylesheet\&quot;&gt;\n\t&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;https://use\.fontawesome\.com/releases/v5\.4\.2/css/all\.css\&quot;\x20integrity=\&quot;sha384-/rXc/GQVaYpyDdyxK\+ecHPVYJSN9bmVFBvjA/9eOB\+pb3F2w2N6fc5qB9Ew5yIns\&quot;\x20crossorigin=\&quot;anonymous\&quot;&gt;\n\t&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;https://cdnjs\.cloudflare\.com/ajax/libs/materialize/1\.0\.0/css/materialize\.min\.css\&quot;\x20media=\&quot;screen,projection\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20cont&quot;)%r(FourOhFourRequest,1A23,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Fri,\x2006\x20Sep\x202024\x2010:26:45\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3\.6\.9\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20DENY\r\nContent-Length:\x206487\r\nX-Content-Type-Options:\x20nosniff\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20http-equiv=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;\n\x20\x20&lt;title&gt;Page\x20not\x20found\x20at\x20/nice\x20ports,/Trinity\.txt\.bak&lt;/title&gt;\n\x20\x20&lt;meta\x20name=\&quot;robots\&quot;\x20content=\&quot;NONE,NOARCHIVE\&quot;&gt;\n\x20\x20&lt;style\x20type=\&quot;text/css\&quot;&gt;\n\x20\x20\x20\x20html\x20\*\x20{\x20padding:0;\x20margin:0;\x20}\n\x20\x20\x20\x20body\x20\*\x20{\x20padding:10px\x2020px;\x20}\n\x20\x20\x20\x20body\x20\*\x20\*\x20{\x20padding:0;\x20}\n\x20\x20\x20\x20body\x20{\x20font:small\x20sans-serif;\x20background:#eee;\x20color:#000;\x20}\n\x20\x20\x20\x20body&gt;div\x20{\x20border-bottom:1px\x20solid\x20#ddd;\x20}\n\x20\x20\x20\x20h1\x20{\x20font-weight:normal;\x20margin-bottom:\.4em;\x20}\n\x20\x20\x20\x20h1\x20span\x20{\x20font-size:60%;\x20color:#666;\x20font-weight:normal;\x20}\n\x20\x20\x20\x20table\x20{\x20border:none;\x20border-collapse:\x20collapse;\x20width:100%;\x20}\n\x20\x20\x20\x20td,\x20th\x20{\x20vertical-align:top;\x20padding:2px\x203px;\x20}\n\x20\x20\x20\x20th&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Date: Fri, 06 Sep 2024 10:26:45 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.6.9&#xa;    Content-Type: text/html&#xa;    X-Frame-Options: DENY&#xa;    Content-Length: 6487&#xa;    X-Content-Type-Options: nosniff&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Page not found at /nice ports,/Trinity.txt.bak&lt;/title&gt;&#xa;    &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&#xa;    html * { padding:0; margin:0; }&#xa;    body * { padding:10px 20px; }&#xa;    body * * { padding:0; }&#xa;    body { font:small sans-serif; background:#eee; color:#000; }&#xa;    body&gt;div { border-bottom:1px solid #ddd; }&#xa;    font-weight:normal; margin-bottom:.4em; }&#xa;    span { font-size:60%; color:#666; font-weight:normal; }&#xa;    table { border:none; border-collapse: collapse; width:100%; }&#xa;    vertical-align:top; padding:2px 3px; }&#xa;  GetRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Date: Fri, 06 Sep 2024 10:26:40 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.6.9&#xa;    Content-Type: text/html; charset=utf-8&#xa;    X-Frame-Options: DENY&#xa;    Vary: Cookie&#xa;    Content-Length: 6227&#xa;    X-Content-Type-Options: nosniff&#xa;    Set-Cookie: csrftoken=IG39UguRkKBu4QDeTQlWD7NpvVeozhJJ4aEkeI32odg7etHc8U1npWIRBIYuPNHX; expires=Fri, 05 Sep 2025 10:26:40 GMT; Max-Age=31449600; Path=/; SameSite=Lax&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;WebMap&lt;/title&gt;&#xa;    &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot; media=&quot;screen,projection&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; cont"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Date: Fri, 06 Sep 2024 10:26:45 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.6.9&#xa;    Content-Type: text/html&#xa;    X-Frame-Options: DENY&#xa;    Content-Length: 6487&#xa;    X-Content-Type-Options: nosniff&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Page not found at /nice ports,/Trinity.txt.bak&lt;/title&gt;&#xa;    &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;&gt;&#xa;    &lt;style type=&quot;text/css&quot;&gt;&#xa;    html * { padding:0; margin:0; }&#xa;    body * { padding:10px 20px; }&#xa;    body * * { padding:0; }&#xa;    body { font:small sans-serif; background:#eee; color:#000; }&#xa;    body&gt;div { border-bottom:1px solid #ddd; }&#xa;    font-weight:normal; margin-bottom:.4em; }&#xa;    span { font-size:60%; color:#666; font-weight:normal; }&#xa;    table { border:none; border-collapse: collapse; width:100%; }&#xa;    vertical-align:top; padding:2px 3px; }</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Date: Fri, 06 Sep 2024 10:26:40 GMT&#xa;    Server: WSGIServer/0.2 CPython/3.6.9&#xa;    Content-Type: text/html; charset=utf-8&#xa;    X-Frame-Options: DENY&#xa;    Vary: Cookie&#xa;    Content-Length: 6227&#xa;    X-Content-Type-Options: nosniff&#xa;    Set-Cookie: csrftoken=IG39UguRkKBu4QDeTQlWD7NpvVeozhJJ4aEkeI32odg7etHc8U1npWIRBIYuPNHX; expires=Fri, 05 Sep 2025 10:26:40 GMT; Max-Age=31449600; Path=/; SameSite=Lax&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;WebMap&lt;/title&gt;&#xa;    &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.4.2/css/all.css&quot; integrity=&quot;sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns&quot; crossorigin=&quot;anonymous&quot;&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot; media=&quot;screen,projection&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; cont</elem>
+</script><script id="http-server-header" output="WSGIServer/0.2 CPython/3.6.9"><elem>WSGIServer/0.2 CPython/3.6.9</elem>
+</script><script id="http-title" output="WebMap"><elem key="title">WebMap</elem>
+</script></port>
+</ports>
+<times srtt="200" rttvar="74" to="100000"/>
+</host>
+<host starttime="1725618363" endtime="1725618530"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.1.7" addrtype="ipv4"/>
+<hostnames>
+<hostname name="Samsung.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="98">
+<extrareasons reason="resets" count="98"/>
+</extraports>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="WebServer" servicefp="SF-Port8080-TCP:V=7.60%I=7%D=9/6%Time=66DAD8E0%P=x86_64-pc-linux-gnu%r(GetRequest,234,&quot;HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/html\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control-Allow-Headers:\x20Content-Type\r\nContent-Length:\x20341\r\nConnection:\x20close\r\nDate:\x20Fri,\x2006\x20Sep\x202024\x2010:26:42\x20GMT\r\nServer:\x20WebServer\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html\x20PUBLIC\x20\&quot;-//W3C//DTD\x20XHTML\x201\.0\x20Transitional//EN\&quot;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\&quot;http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\&quot;&gt;\n&lt;html\x20xmlns=\&quot;http://www\.w3\.org/1999/xhtml\&quot;\x20xml:lang=\&quot;en\&quot;\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;403\x20Forbidden&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;403\x20Forbidden&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;)%r(HTTPOptions,DE,&quot;HTTP/1\.0\x20200\x20OK\r\nAllow:\x20OPTIONS,\x20GET,\x20HEAD,\x20POST\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control-Allow-Headers:\x20Content-Type\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2006\x20Sep\x202024\x2010:26:43\x20GMT\r\nServer:\x20WebServer\r\n\r\n&quot;)%r(RTSPRequest,1EE,&quot;HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nContent-Length:\x20345\r\nConnection:\x20close\r\nDate:\x20Fri,\x2006\x20Sep\x202024\x2010:26:43\x20GMT\r\nServer:\x20WebServer\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html\x20PUBLIC\x20\&quot;-//W3C//DTD\x20XHTML\x201\.0\x20Transitional//EN\&quot;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\&quot;http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\&quot;&gt;\n&lt;html\x20xmlns=\&quot;http://www\.w3\.org/1999/xhtml\&quot;\x20xml:lang=\&quot;en\&quot;\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;400\x20Bad\x20Request&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;)%r(FourOhFourRequest,234,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control-Allow-Headers:\x20Content-Type\r\nContent-Length:\x20341\r\nConnection:\x20close\r\nDate:\x20Fri,\x2006\x20Sep\x202024\x2010:26:43\x20GMT\r\nServer:\x20WebServer\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\x20encoding=\&quot;iso-8859-1\&quot;\?&gt;\n&lt;!DOCTYPE\x20html\x20PUBLIC\x20\&quot;-//W3C//DTD\x20XHTML\x201\.0\x20Transitional//EN\&quot;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\&quot;http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\&quot;&gt;\n&lt;html\x20xmlns=\&quot;http://www\.w3\.org/1999/xhtml\&quot;\x20xml:lang=\&quot;en\&quot;\x20lang=\&quot;en\&quot;&gt;\n\x20&lt;head&gt;\n\x20\x20&lt;title&gt;404\x20Not\x20Found&lt;/title&gt;\n\x20&lt;/head&gt;\n\x20&lt;body&gt;\n\x20\x20&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;\n\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Headers: Content-Type&#xa;    Content-Length: 341&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:43 GMT&#xa;    Server: WebServer&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;&#xa;    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xa;    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404 Not Found&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404 Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  GetRequest: &#xa;    HTTP/1.0 403 Forbidden&#xa;    Content-Type: text/html&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Headers: Content-Type&#xa;    Content-Length: 341&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:42 GMT&#xa;    Server: WebServer&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;&#xa;    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xa;    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;403 Forbidden&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;403 Forbidden&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  HTTPOptions: &#xa;    HTTP/1.0 200 OK&#xa;    Allow: OPTIONS, GET, HEAD, POST&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Headers: Content-Type&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:43 GMT&#xa;    Server: WebServer&#xa;  RTSPRequest: &#xa;    HTTP/1.0 400 Bad Request&#xa;    Content-Type: text/html&#xa;    Content-Length: 345&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:43 GMT&#xa;    Server: WebServer&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;&#xa;    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xa;    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;400 Bad Request&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;400 Bad Request&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;"><elem key="FourOhFourRequest">&#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Headers: Content-Type&#xa;    Content-Length: 341&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:43 GMT&#xa;    Server: WebServer&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;&#xa;    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xa;    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;404 Not Found&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;404 Not Found&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.0 403 Forbidden&#xa;    Content-Type: text/html&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Headers: Content-Type&#xa;    Content-Length: 341&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:42 GMT&#xa;    Server: WebServer&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;&#xa;    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xa;    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;403 Forbidden&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;403 Forbidden&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.0 200 OK&#xa;    Allow: OPTIONS, GET, HEAD, POST&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Headers: Content-Type&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:43 GMT&#xa;    Server: WebServer</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.0 400 Bad Request&#xa;    Content-Type: text/html&#xa;    Content-Length: 345&#xa;    Connection: close&#xa;    Date: Fri, 06 Sep 2024 10:26:43 GMT&#xa;    Server: WebServer&#xa;    &lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;&#xa;    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;&#xa;    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xa;    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;400 Bad Request&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;400 Bad Request&lt;/h1&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+</script><script id="http-server-header" output="WebServer"><elem>WebServer</elem>
+</script><script id="http-title" output="403 Forbidden"><elem key="title">403 Forbidden</elem>
+</script></port>
+<port protocol="tcp" portid="9999"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="abyss" method="table" conf="3"/></port>
+</ports>
+<times srtt="6194" rttvar="964" to="100000"/>
+</host>
+<host starttime="1725618363" endtime="1725618530"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.1.11" addrtype="ipv4"/>
+<hostnames>
+<hostname name="foutatoro.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="98">
+<extrareasons reason="resets" count="98"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;"><table key="100000">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="50766" rttvar="51060" to="255006"/>
+</host>
+<host starttime="1725618363" endtime="1725618530"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.1.154" addrtype="ipv4"/>
+<hostnames>
+<hostname name="Bouygtel4K-272011927204675.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="97">
+<extrareasons reason="resets" count="97"/>
+</extraports>
+<port protocol="tcp" portid="8008"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="castv2" product="Ninja Sphere Chromecast driver" tunnel="ssl" method="probed" conf="10"/><script id="ssl-cert" output="Subject: commonName=abd1a9e0-d503-1b9e-060f-523f89063adf&#xa;Issuer: commonName=abd1a9e0-d503-1b9e-060f-523f89063adf&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2024-09-05T13:31:02&#xa;Not valid after:  2024-09-07T13:31:02&#xa;MD5:   8f5a 8c60 fafc 98c0 51bd 598a d4db 34f5&#xa;SHA-1: 1b05 b145 f755 cda5 52e0 1e0a 7939 170a 01f2 0f92"><table key="subject">
+<elem key="commonName">abd1a9e0-d503-1b9e-060f-523f89063adf</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">abd1a9e0-d503-1b9e-060f-523f89063adf</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x635acb844a18</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2024-09-05T13:31:02</elem>
+<elem key="notAfter">2024-09-07T13:31:02</elem>
+</table>
+<elem key="md5">8f5a8c60fafc98c051bd598ad4db34f5</elem>
+<elem key="sha1">1b05b145f755cda552e01e0a7939170a01f20f92</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2jCCAcKgAwIBAgIEFEkmXjANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDDCRh&#xa;YmQxYTllMC1kNTAzLTFiOWUtMDYwZi01MjNmODkwNjNhZGYwHhcNMjQwOTA1MTMz&#xa;MTAyWhcNMjQwOTA3MTMzMTAyWjAvMS0wKwYDVQQDDCRhYmQxYTllMC1kNTAzLTFi&#xa;OWUtMDYwZi01MjNmODkwNjNhZGYwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQCzZedahA1JOn9+J619Tf6YYHMAIwISLazxFolGgb7NQENDqyAOXFBrK8ls&#xa;LOGdJAaY5iR8NU4RUptA9sQKt/jjt6o1t/bopZOspiYAi9woUJDmSNEBazyL/u1d&#xa;uQ4PE7HQrhYJw3cFMdvgkkT4hP/JNTst/nmLgpm/xut6cy0HUoHM4fYyUiBTD/fd&#xa;qvPAxGvCOg/K6qdQzrWL/6/LThZ77WwckRDD3JmGLzvcH6Zz+ulkMwFWo0lcN2me&#xa;nu2CKJsFfq8MTDkKt/Tw17q3suoyXO+a1SpMtsn6NUXvBfM/29X1XqX3r2TQVGT6&#xa;9/BzUV0Th697CSU9IVKd+VmEk2Y3AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAGxU&#xa;CrnKtYxxPNkTyExCN5jHCBYCOvko5DC3J3L3sz3U+lAJaEp9DS+uIGfiJtL4bZA1&#xa;RNkwBV/jFm+bmU18j8/mI4GxSWdid17IwmdjNsHWMCfBbIihcOliMtuhzoOla3co&#xa;YNtV5WyGxrgre4gK/mjN5BdVRc+2CDywV9uAEN/6JklucpbE8kn7b+EQCNHc1tIL&#xa;rYa0Z04Vp/9Ji8bR4NBXGr6f3Mc1XP+8KQmoK/Y2h26SBD5JJ3w6edaQd3+vNDhc&#xa;kayVo1esktKdoK8BOQN0aPjS/9jTlKwZ/2bHwYPocKVlLSWMfD8pPN+L1LRdurNC&#xa;9sDBoERcrz703lVlO/A=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https-alt" tunnel="ssl" method="table" conf="3"/><script id="http-title" output="Site doesn&apos;t have a title."></script><script id="ssl-cert" output="Subject: commonName=-6029398138610171322/organizationName=Google Inc/stateOrProvinceName=Washington/countryName=US&#xa;Issuer: commonName=Arcadyan TV HMB9213NW Marvell BG4-CT Cast ICA/organizationName=Google Inc/stateOrProvinceName=Washington/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-07-30T19:12:57&#xa;Not valid after:  2040-07-30T19:12:57&#xa;MD5:   27ab efae b398 fb13 d61e 4d51 b1f8 e0cd&#xa;SHA-1: 3e62 9761 8c13 c08f df25 b52a 3343 da3d 3417 0f08"><table key="subject">
+<elem key="localityName">Kirkland</elem>
+<elem key="stateOrProvinceName">Washington</elem>
+<elem key="organizationName">Google Inc</elem>
+<elem key="organizationalUnitName">Widevine</elem>
+<elem key="countryName">US</elem>
+<elem key="commonName">-6029398138610171322</elem>
+</table>
+<table key="issuer">
+<elem key="localityName">Kirkland</elem>
+<elem key="stateOrProvinceName">Washington</elem>
+<elem key="organizationName">Google Inc</elem>
+<elem key="organizationalUnitName">Widevine</elem>
+<elem key="countryName">US</elem>
+<elem key="commonName">Arcadyan TV HMB9213NW Marvell BG4-CT Cast ICA</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x635acb720ee8</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="value">Digital Signature</elem>
+<elem key="name">X509v3 Key Usage</elem>
+</table>
+<table>
+<elem key="value">TLS Web Client Authentication</elem>
+<elem key="name">X509v3 Extended Key Usage</elem>
+</table>
+<table>
+<elem key="value">56:84:5C:1F:7B:C5:8D:F8:FA:A9:38:85:1B:B5:0A:C2:10:3C:08:4C</elem>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+</table>
+<table>
+<elem key="value">keyid:36:E8:1C:23:5B:F1:A7:E6:ED:82:83:58:E2:76:C7:BD:68:DA:8D:C4&#xa;</elem>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-07-30T19:12:57</elem>
+<elem key="notAfter">2040-07-30T19:12:57</elem>
+</table>
+<elem key="md5">27abefaeb398fb13d61e4d51b1f8e0cd</elem>
+<elem key="sha1">3e6297618c13c08fdf25b52a3343da3d34170f08</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEBzCCAu+gAwIBAgIJAKxTRlaKvUJGMA0GCSqGSIb3DQEBCwUAMIGVMQswCQYD&#xa;VQQGEwJVUzETMBEGA1UECAwKV2FzaGluZ3RvbjERMA8GA1UEBwwIS2lya2xhbmQx&#xa;EzARBgNVBAoMCkdvb2dsZSBJbmMxETAPBgNVBAsMCFdpZGV2aW5lMTYwNAYDVQQD&#xa;DC1BcmNhZHlhbiBUViBITUI5MjEzTlcgTWFydmVsbCBCRzQtQ1QgQ2FzdCBJQ0Ew&#xa;HhcNMjAwNzMwMTkxMjU3WhcNNDAwNzMwMTkxMjU3WjB8MQswCQYDVQQGEwJVUzET&#xa;MBEGA1UECAwKV2FzaGluZ3RvbjERMA8GA1UEBwwIS2lya2xhbmQxEzARBgNVBAoM&#xa;Ckdvb2dsZSBJbmMxETAPBgNVBAsMCFdpZGV2aW5lMR0wGwYDVQQDDBQtNjAyOTM5&#xa;ODEzODYxMDE3MTMyMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANRA&#xa;/G+fw7Odw4FyUo7dSYnRqZ8Y1xj626bce4Td3NzBwL1ydRU+zo83h0mM5jflk2Zf&#xa;Z8HG4F7x/2K35G14gJ348tKNFKOSKVHSiYwU6t+Ysl11FOYvJ1zKnFeNTL74X7zB&#xa;txT/aAbf1DPCoGV1YciYz2OoHL/15afxmoAgDe7fhydaW7mWx/3ecKFpCwXOranY&#xa;U8ZiQTkafxSC0BMPZy0zsBVfimCckc/wzVgrFQsJPIQKVVF64RRH9V1eECLL50dg&#xa;BeF9AadLjmRw5/JxXlpTZYliHVGwFuDWNXeWAAa2ddb10BnQFfrgbR08Rv+GQQTJ&#xa;ONhH93rN3aok5hgV3fUCAwEAAaNyMHAwDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMC&#xa;B4AwEwYDVR0lBAwwCgYIKwYBBQUHAwIwHQYDVR0OBBYEFFaEXB97xY34+qk4hRu1&#xa;CsIQPAhMMB8GA1UdIwQYMBaAFDboHCNb8afm7YKDWOJ2x71o2o3EMA0GCSqGSIb3&#xa;DQEBCwUAA4IBAQBxefevn3BnYHPFVe1ht6Swm7PI6ZDIvrRg5i4yd19avkSSJgy/&#xa;d5ajFDd5I0dtpZd7+J1h62+XCk/qxeXIHZN5RWphz4hN3bfo+eXBscTmSIAebGU3&#xa;3h6/h9axICjtveLQ2II7A8mxd/ljJpPSP4SuPqlfmQpJsIESy2HbjSeN+SPawhmr&#xa;FVutXRuKT2qDwcqxRjtz/Efm0Oew/Ylb5Z2+4Og+p22GJ1o+LbpodrpTw1fKzgJy&#xa;ASMKeBIpEY0eayBEShZtKfA7jRib6qmbS5g26/u4hf5nvXbMwQpCKeuBh5QwjVy7&#xa;sOYvhIPGOtuca8fT+BjpfdTQ3nrAGKjRQTnk&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<times srtt="2910" rttvar="759" to="100000"/>
+</host>
+<host starttime="1725618363" endtime="1725618387"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="192.168.1.165" addrtype="ipv4"/>
+<hostnames>
+<hostname name="Galaxy-S23.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="100">
+<extrareasons reason="resets" count="100"/>
+</extraports>
+</ports>
+<times srtt="53068" rttvar="50884" to="256604"/>
+</host>
+<host starttime="1725618363" endtime="1725618390"><status state="up" reason="reset" reason_ttl="127"/>
+<address addr="192.168.1.178" addrtype="ipv4"/>
+<hostnames>
+<hostname name="AFR799725.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="resets" count="96"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6000"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="X11" method="table" conf="3"/></port>
+</ports>
+<times srtt="34936" rttvar="39233" to="191868"/>
+</host>
+<host starttime="1725618363" endtime="1725618530"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="192.168.1.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bbox.lan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="resets" count="96"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="domain" product="dnsmasq" version="2.75" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.75</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="lighttpd" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd</cpe></service><script id="http-server-header" output="Lighttpd"><elem>Lighttpd</elem>
+</script><script id="http-title" output="Did not follow redirect to https://mabbox.bytel.fr:443/"><elem key="redirect_url">https://mabbox.bytel.fr:443/</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="lighttpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd</cpe></service><script id="http-title" output="Did not follow redirect to https://mabbox.bytel.fr:443/"><elem key="redirect_url">https://mabbox.bytel.fr:443/</elem>
+</script><script id="ssl-cert" output="Subject: commonName=mabbox.bytel.fr/organizationName=Bouygues Telecom SA/countryName=FR&#xa;Subject Alternative Name: DNS:mabbox.bytel.fr&#xa;Issuer: commonName=DigiCert TLS RSA SHA256 2020 CA1/organizationName=DigiCert Inc/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2024-07-30T00:00:00&#xa;Not valid after:  2025-07-29T23:59:59&#xa;MD5:   9715 97fe 3e2c 52ef 8c58 ff03 a537 68ed&#xa;SHA-1: 98f1 dc15 de54 fa60 acb1 5965 b7ff bd4b 7824 eec3"><table key="subject">
+<elem key="organizationName">Bouygues Telecom SA</elem>
+<elem key="countryName">FR</elem>
+<elem key="commonName">mabbox.bytel.fr</elem>
+<elem key="localityName">Paris</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">DigiCert Inc</elem>
+<elem key="countryName">US</elem>
+<elem key="commonName">DigiCert TLS RSA SHA256 2020 CA1</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x635acb6f8718</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="value">keyid:B7:6B:A2:EA:A8:AA:84:8C:79:EA:B4:DA:0F:98:B2:C5:95:76:B9:F4&#xa;</elem>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+</table>
+<table>
+<elem key="value">37:FF:FE:B6:70:FF:A9:06:8C:01:D1:3A:4C:68:8A:76:1B:DC:04:0C</elem>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+</table>
+<table>
+<elem key="value">DNS:mabbox.bytel.fr</elem>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+</table>
+<table>
+<elem key="value">Policy: 2.23.140.1.2.2&#xa;  CPS: http://www.digicert.com/CPS&#xa;</elem>
+<elem key="name">X509v3 Certificate Policies</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="critical">true</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+<elem key="name">X509v3 Extended Key Usage</elem>
+</table>
+<table>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://crl3.digicert.com/DigiCertTLSRSASHA2562020CA1-4.crl&#xa;&#xa;Full Name:&#xa;  URI:http://crl4.digicert.com/DigiCertTLSRSASHA2562020CA1-4.crl&#xa;</elem>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+</table>
+<table>
+<elem key="value">OCSP - URI:http://ocsp.digicert.com&#xa;CA Issuers - URI:http://cacerts.digicert.com/DigiCertTLSRSASHA2562020CA1-1.crt&#xa;</elem>
+<elem key="name">Authority Information Access</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="critical">true</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 12:F1:4E:34:BD:53:72:4C:84:06:19:C3:8F:3F:7A:13:&#xa;                F8:E7:B5:62:87:88:9C:6D:30:05:84:EB:E5:86:26:3A&#xa;    Timestamp : Jul 30 12:32:17.793 2024 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:47:45:40:6A:5E:67:CB:B9:3E:0D:30:8C:&#xa;                BE:E0:7B:B4:3D:EE:59:10:3A:27:A9:7C:04:8A:21:7C:&#xa;                9E:D2:C4:6D:02:21:00:B5:5E:0D:DA:0D:31:F5:19:C2:&#xa;                CB:72:76:1E:E1:C7:63:C2:98:64:5E:CA:A2:C4:60:FB:&#xa;                0F:F0:80:92:B7:68:2E&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 7D:59:1E:12:E1:78:2A:7B:1C:61:67:7C:5E:FD:F8:D0:&#xa;                87:5C:14:A0:4E:95:9E:B9:03:2F:D9:0E:8C:2E:79:B8&#xa;    Timestamp : Jul 30 12:32:17.845 2024 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:D4:AC:1F:7D:3A:0B:C0:3C:50:A7:A7:&#xa;                A6:19:7B:BE:5E:F4:B5:95:15:A7:A3:A8:8E:16:3D:D2:&#xa;                0E:ED:D3:63:FA:02:21:00:E5:A1:B6:36:D0:16:6C:7F:&#xa;                25:A6:0D:01:BA:3A:0F:37:BF:8A:14:61:55:69:D8:0A:&#xa;                CE:F0:B9:E3:B4:DB:27:F5&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : CC:FB:0F:6A:85:71:09:65:FE:95:9B:53:CE:E9:B2:7C:&#xa;                22:E9:85:5C:0D:97:8D:B6:A9:7E:54:C0:FE:4C:0D:B0&#xa;    Timestamp : Jul 30 12:32:17.847 2024 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:14:EE:6F:81:87:1B:EF:14:BD:3D:7C:32:&#xa;                70:E3:20:AB:4B:38:1C:FB:2F:67:ED:BB:47:CE:1B:C0:&#xa;                A9:5F:80:1A:02:20:3F:E8:85:07:AA:FB:8A:68:BA:B6:&#xa;                6B:BA:F4:DB:83:E2:A4:E0:0F:02:BC:96:C9:A9:DE:41:&#xa;                F7:E9:09:C8:C3:A3</elem>
+<elem key="name">CT Precertificate SCTs</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2024-07-30T00:00:00</elem>
+<elem key="notAfter">2025-07-29T23:59:59</elem>
+</table>
+<elem key="md5">971597fe3e2c52ef8c58ff03a53768ed</elem>
+<elem key="sha1">98f1dc15de54fa60acb15965b7ffbd4b7824eec3</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIGojCCBYqgAwIBAgIQCGOZeBpXxKTLrDDD6jzKkzANBgkqhkiG9w0BAQsFADBP&#xa;MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMSkwJwYDVQQDEyBE&#xa;aWdpQ2VydCBUTFMgUlNBIFNIQTI1NiAyMDIwIENBMTAeFw0yNDA3MzAwMDAwMDBa&#xa;Fw0yNTA3MjkyMzU5NTlaMFUxCzAJBgNVBAYTAkZSMQ4wDAYDVQQHEwVQYXJpczEc&#xa;MBoGA1UEChMTQm91eWd1ZXMgVGVsZWNvbSBTQTEYMBYGA1UEAxMPbWFiYm94LmJ5&#xa;dGVsLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoyf+ASFBEJU6&#xa;qT1uA2qTb1nTLVEqYezLDkw76EtXRSVViIfC/1Mf4UgstS2ljwIsFmzgVzdd90HX&#xa;rEuim6LIqHx81EWxMaWvXMANV61R27uqXatdsq0VRsGGLosVDgHCJsGw9DN2KbbP&#xa;rJyTGZmpkVl2LoF4r41ejJRjKAMR3W9L1DHnR75QriLF2jvz5JJla43ijJ5og51T&#xa;8Zgn3km/xUuQdM0J12FjfUTb3+qcGd+W0fl3pPvlzh6PGRIamEsiJCsEh4ns+uua&#xa;jrYYcA0mTY4RUMsP4tEak5PUKe9Pdh2zt8FTyv82pxhk4CaPzIqvZmh0BSeiu3Ft&#xa;I0cjPLZkCQIDAQABo4IDcjCCA24wHwYDVR0jBBgwFoAUt2ui6qiqhIx56rTaD5iy&#xa;xZV2ufQwHQYDVR0OBBYEFDf//rZw/6kGjAHROkxoinYb3AQMMBoGA1UdEQQTMBGC&#xa;D21hYmJveC5ieXRlbC5mcjA+BgNVHSAENzA1MDMGBmeBDAECAjApMCcGCCsGAQUF&#xa;BwIBFhtodHRwOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwDgYDVR0PAQH/BAQDAgWg&#xa;MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjCBjwYDVR0fBIGHMIGEMECg&#xa;PqA8hjpodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRUTFNSU0FTSEEy&#xa;NTYyMDIwQ0ExLTQuY3JsMECgPqA8hjpodHRwOi8vY3JsNC5kaWdpY2VydC5jb20v&#xa;RGlnaUNlcnRUTFNSU0FTSEEyNTYyMDIwQ0ExLTQuY3JsMH8GCCsGAQUFBwEBBHMw&#xa;cTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEkGCCsGAQUF&#xa;BzAChj1odHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRUTFNSU0FT&#xa;SEEyNTYyMDIwQ0ExLTEuY3J0MAwGA1UdEwEB/wQCMAAwggF+BgorBgEEAdZ5AgQC&#xa;BIIBbgSCAWoBaAB2ABLxTjS9U3JMhAYZw48/ehP457Vih4icbTAFhOvlhiY6AAAB&#xa;kQOgh4EAAAQDAEcwRQIgR0VAal5ny7k+DTCMvuB7tD3uWRA6J6l8BIohfJ7SxG0C&#xa;IQC1Xg3aDTH1GcLLcnYe4cdjwphkXsqixGD7D/CAkrdoLgB3AH1ZHhLheCp7HGFn&#xa;fF79+NCHXBSgTpWeuQMv2Q6MLnm4AAABkQOgh7UAAAQDAEgwRgIhANSsH306C8A8&#xa;UKenphl7vl70tZUVp6OojhY90g7t02P6AiEA5aG2NtAWbH8lpg0BujoPN7+KFGFV&#xa;adgKzvC547TbJ/UAdQDM+w9qhXEJZf6Vm1PO6bJ8IumFXA2XjbapflTA/kwNsAAA&#xa;AZEDoIe3AAAEAwBGMEQCIBTub4GHG+8UvT18MnDjIKtLOBz7L2ftu0fOG8CpX4Aa&#xa;AiA/6IUHqvuKaLq2a7r024PipOAPAryWyaneQffpCcjDozANBgkqhkiG9w0BAQsF&#xa;AAOCAQEACqYZn42F1bEmjaeWz4NxzC3fImUllPK1vtqyw8xWSRUZLiPgWG6yS6PK&#xa;WYwOmsv+i7zL/Ro829hSbe6nq7Fesz5Cio8DkZW2h4tfUesN0PlyCBZOr79Cr891&#xa;i6dk5MNOxJznUmhfYIiuCwNOarDujZThlNSNmcJXf3MZGIZP4G5IWyj5F/cDL/14&#xa;FQwCXBaC9wbGJlVIpX6Ef6u47rFQcYz3C59xsDILOgfPjNfZE3alEN0OHWKFfmOR&#xa;rgu+95dA4GxaE2azDilw6QQpiaHtUEOmFatrVvQbWfBxyS+zeVBQn/t71Ovmnz5r&#xa;PYJwU+JlxqMbRx0oea8ZGNiDCxqkFA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5060"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3869" rttvar="806" to="100000"/>
+</host>
+<runstats><finished time="1725618530" timestr="Fri Sep  6 10:28:50 2024" elapsed="167.05" summary="Nmap done at Fri Sep  6 10:28:50 2024; 256 IP addresses (7 hosts up) scanned in 167.05 seconds" exit="success"/><hosts up="7" down="249" total="256"/>
+</runstats>
+</nmaprun>
