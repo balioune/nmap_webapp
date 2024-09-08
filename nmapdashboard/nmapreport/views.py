@@ -336,7 +336,7 @@ def index(request, filterservice="", filterportid=""):
 		r['auth'] = True
 
 	gitcmd = os.popen('cd ' + settings.PROJECT_ROOT + '/../' + 'nmapreport && git rev-parse --abbrev-ref HEAD')
-	r['webmapver'] = 'WebMap '+gitcmd.read()+'<br>This project is currently a beta, please <b>DO NOT</b> expose WebMap to internet.<br>This version is <b>NOT</b> production ready.'
+	r['webmapver'] = 'AFKLM Scanning tool '+gitcmd.read()+'<br>This project is under development for ITDS'
 
 	if 'scanfile' in request.session:
 		#oo = xmltodict.parse(open('/opt/xml/'+request.session['scanfile'], 'r').read())

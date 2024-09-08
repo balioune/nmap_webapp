@@ -24,9 +24,21 @@ for i in schedfiles:
 
 			sched['lastrun'] = time.time()
 
+			"""
 			nmapout = os.popen('nmap '+sched['params']['params']+' --script='+cdir+'/nse/ -oX /tmp/'+str(sched['number'])+'_'+sched['params']['filename']+'.active '+sched['params']['target']+' > /dev/null 2>&1 && '+
 			'sleep 5 && mv /tmp/'+str(sched['number'])+'_'+sched['params']['filename']+'.active /opt/xml/webmapsched_'+str(sched['lastrun'])+'_'+sched['params']['filename']+' && '+
 			'ls -lart /opt/xml/webmapsched_'+str(sched['lastrun'])+'_'+sched['params']['filename']+' && python3 '+cdir+'/cve.py webmapsched_'+str(sched['lastrun'])+'_'+sched['params']['filename']+'').readlines()
+
+			"""
+			nmapout = os.popen('nmap ' + sched['params']['params'] + ' --script=' + cdir + '/nse/ -oX /tmp/' + str(
+				sched['number']) + '_' + sched['params']['filename'] + '.active ' + sched['params'][
+								   'target'] + ' > /dev/null 2>&1 && ' +
+							   'sleep 5 && mv /tmp/' + str(sched['number']) + '_' + sched['params'][
+								   'filename'] + '.active ' +  settings.PROJECT_ROOT + '/../../xml/' + 'webmapsched_' + str(sched['lastrun']) + '_' +
+							   sched['params']['filename'] + ' && ' +
+							   'ls -lart '+ settings.PROJECT_ROOT + '/../../xml/' + 'webmapsched_' + str(sched['lastrun']) + '_' + sched['params'][
+								   'filename'] + ' && python3 ' + cdir + '/cve.py webmapsched_' + str(
+				sched['lastrun']) + '_' + sched['params']['filename'] + '').readlines()
 
 			print(nmapout)
 
